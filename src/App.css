@@ -175,6 +175,7 @@ nav{
     border-radius: 0 !important;
     box-shadow: none !important;
     -webkit-box-shadow:none !important; 
+    justify-content: center;
 }
 
 .vertical-timeline-element-content{

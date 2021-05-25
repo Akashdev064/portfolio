@@ -1,38 +1,437 @@
-.App {
-  text-align: center;
+body{
+    font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/************************************* Navigation bar ****************************************/
+.hamburger{
+    color: white;
+    size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+script{
+    color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav{
+    position: absolute !important;
+    top: 0;
+    z-index: 2;
 }
 
-.App-link {
-  color: #61dafb;
+.container-fluid{
+    width: 100vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
+#navbarSupportedContent{
+    text-align: center;
+}
+
+.nav-link{
+    font-size: .8rem;
+    letter-spacing: 0.0375rem;
+    font-family: 'Montserrat', sans-serif;
+    cursor:pointer;
+    color: white !important;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.nav-link::after{
+    content:'';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+
+.nav-link:hover::after{
+    width: 100%;
+    display: block;
+    transition: width .3s;
+}
+
+/************************************* Header ****************************************/
+
+/* .header-wrapper{
+    background-image:url(./bulb.jpg) no-repeat;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+} */
+
+
+
+.header-wrapper{
+    background-color: #000000;
+    height: 100vh;
+}
+
+
+.main-info{
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-info h1{
+    color: rgb(96, 92, 92);
+    font-family: 'Euphoria Script', cursive;
+    font-size: 6.75rem;
+}
+
+.main-info h1:hover{
+    animation-name: colour;
+    animation-duration: 2s;
+    transition-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colour{
+    0% {color: rgb(201, 10, 10)}
+    10% {color: rgb(201, 125, 10)}
+    20% {color: rgb(201, 185, 10)}
+    30% {color: rgb(172, 227, 9)}
+    40% {color: rgb(76, 247, 3)}
+    50% {color: rgb(2, 217, 255)}
+    55% {color: rgb(2, 145, 255)}
+    60% {color: rgb(10, 86, 201)}
+    70% {color: rgb(110, 46, 237)}
+    80% {color: rgb(193, 15, 242)}
+    90% {color: rgb(185, 10, 201)}
+    100% {color: rgb(201, 10, 147)}
+    0% {color: rgb(255, 0, 60)}
+}
+
+/************* TYpes Text */
+
+.typetext{
+    display: inline-flex !important;
+
+}
+.typed-text{
+    font-size: 2rem;
+    color:chartreuse;
+    font-family: 'Courier Prime', monospace;
+}
+
+@media(max-width:768px){
+    .main-info h1{
+        font-size: 1.7rem !important;
+    } 
+}
+
+@media(max-width:768px){
+    .typed-text{
+        font-size: 1.3rem !important;
+    } 
+}
+
+/************* Particles */
+
+.tsparticles-canvas-el{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+@media(max-width:768px){
+    .particle-canvas{
+        display: none;
+    }
+}
+
+/************************************* About ****************************************/
+
+.about-heading{
+    font-family: 'Rancho', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    color: rgb(74, 72, 72);
+    margin-bottom: 2rem;
+    padding-top: 3rem;
+}
+
+.about-me{
+    background-color: #05adb6;
+}
+
+.vertical-timeline{
+    margin: 0 0;
+}
+
+.vertical-timeline-element-icon{
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow:none !important; 
+}
+
+.vertical-timeline-element-content{
+    border-radius: 1rem !important;
+    width: 50rem;
+
+}
+
+.vertical-timeline::before{
+    width: 2px !important;
+}
+
+AcUnitIcon{
+    size: 4rem;
+    color: white;
+}
+/************************************* Skills ****************************************/
+
+.skillpage{
+    background-color:#aad8d3;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-heading{
+    margin-top: 4rem;
+    font-family: 'Rancho', cursive;
+    color: rgb(74, 72, 72);
+    font-size: 2.5rem;
+}
+
+.skillboxes{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+}
+
+.skillWords{
+    padding: 3.75rem 3.125rem 3.75rem;
+    font-size: 1rem;
+}
+
+.css-1ocsnff {
+    height: 150px !important;
+    width:200px !important;
+    margin: 2rem 2rem;
+}
+
+.zoombox{
+    border-radius: 2rem;
+}
+
+.skillWords{
+    margin-bottom: 0;
+}
+
+
+
+
+.zoombox.a{
+    background-color:rgb(210, 68, 68);
+    color: rgb(140, 5, 5);
+}
+.skillWords.a{
+    padding: auto;
+    transition: transform 0.5s ease-in-out;
+}
+.skillWords.a:hover{
+    transform :scale(3)
+}
+
+
+
+
+.zoombox.b{
+    background-color:rgb(88, 174, 88);
+    color:#056005;
+}
+.skillWords.b{
+    padding: auto;
+    transition: transform 0.5s ease-in-out;
+}
+.skillWords.b:hover{
+    transform :scale(3)
+}
+
+
+
+
+
+.zoombox.c{
+    background-color:rgb(232, 113, 232);
+    color: rgb(104, 4, 104);
+}
+.skillWords.c{
+    padding: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.skillWords.c:hover{
+    transform :scale(2.5)
+}
+
+
+
+
+
+.zoombox.d{
+    background-color:rgb(89, 89, 232);
+    color:rgb(4, 4, 108);
+}
+.skillWords.d{
+    padding: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.skillWords.d:hover{
+    transform :scale(3)
+}
+
+
+
+
+
+
+.zoombox.e{
+    background-color:rgb(240, 155, 169);
+    color: rgb(179, 56, 77);   
+    transition: transform .7s;
+}
+.skillWords.e{
+    padding: 3.25rem 3.125rem 3.25rem;
+    font-size: 2rem !important;
+}
+.zoombox.e:hover{
     transform: rotate(360deg);
-  }
+}
+
+
+
+
+
+
+
+.zoombox.f{
+    background-color:rgb(237, 237, 146);
+    color:rgb(167, 167, 10);
+}
+.skillWords.f{
+    padding: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.skillWords.f:hover{
+    transform :scale(3)
+}
+
+
+
+
+
+.zoombox.g{
+    background-color:rgb(193, 238, 102);
+    color:rgb(107, 150, 20);
+    margin-bottom: 4rem;
+}
+.skillWords.g{
+    padding: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.skillWords.g:hover{
+    transform :scale(3)
+}
+
+
+
+
+
+
+.zoombox.h{
+    background-color:rgb(255, 210, 125);
+    color:rgb(189, 124, 3);
+    margin-bottom: 4rem;
+}
+.skillWords.h{
+    padding: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.skillWords.h:hover{
+    transform :scale(2.5)
+}
+
+
+
+
+
+
+.zoombox.i{
+    background-color:rgb(126, 167, 211);
+    color:rgb(0, 21, 139);
+    margin-bottom: 4rem;
+}
+.skillWords.i{
+    padding: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.skillWords.i:hover{
+    transform :scale(2.5)
+}
+
+
+
+/*
+/************************************* CTA ****************************************/
+
+.callToAction{
+    background-color: #eeeeee;
+    height: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    
+}
+.callToAction h4{
+    color: rgb(103, 100, 100);
+    text-align: center;
+    padding-bottom: 2rem;
+    font-family: 'Rancho', cursive;
+    font-size: 1.5rem;
+}
+
+.icons{
+    margin:2rem 2rem;
+    padding-top: 5rem;
+}
+
+.footer-icons{
+    text-align: center;
+    justify-content: center;
+}
+    
+/********************** Hover *********************/
+
+.icons.instagram a:hover{
+    color: red;
+}
+
+
+.icons.mail a:hover{
+    color:blue;
+}
+
+.icons.whatsapp a:hover{
+    color:greenyellow;
 }
